@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id(); //PK
             $table->string("name");
             $table->double("price");
-            $table->string("picture");
+            $table->string("picture")->default("placeholder.jpg");
             $table->longText("description");
             $table->string("origin");
             $table->boolean("limited");

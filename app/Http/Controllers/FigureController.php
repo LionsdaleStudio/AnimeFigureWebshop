@@ -22,7 +22,7 @@ class FigureController extends Controller
      */
     public function create()
     {
-        //
+        return view("figurines.create");
     }
 
     /**
@@ -30,7 +30,11 @@ class FigureController extends Controller
      */
     public function store(StoreFigureRequest $request)
     {
-        //
+        echo "This is the store page";
+
+        Figure::create($request->all());
+
+        return "mentettem";
     }
 
     /**
