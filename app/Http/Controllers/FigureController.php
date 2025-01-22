@@ -13,7 +13,8 @@ class FigureController extends Controller
      */
     public function index()
     {
-        return "Én vagyok a controller index metódusa";
+        $figurines = Figure::all();
+        return view("figurines.index", ["figurines" => $figurines]);
     }
 
     /**
