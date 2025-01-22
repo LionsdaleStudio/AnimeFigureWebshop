@@ -13,7 +13,7 @@ class FigureController extends Controller
      */
     public function index()
     {
-        //
+        return "Én vagyok a controller index metódusa";
     }
 
     /**
