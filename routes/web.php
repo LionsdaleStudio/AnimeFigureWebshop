@@ -23,18 +23,10 @@ Route::get('/', function () {
 //Route::get("/figurines/create", [FigureController::class, "create"]);
 //Route::get("/figurines/{figure}/edit", [FigureController::class, "edit"]);
 //Route::get("/figurines/{figure}/show", [FigureController::class, "show"]);
-
 //Route::post( "/figurines", [FigureController::class, "store"]);
-
 //Route::put( "/figurines/{figure}", [FigureController::class, "update"]);
 //Route::patch( "/figurines/{figure}", [FigureController::class, "update"]);
-
 //Route::delete( "/figurines/{figure}", [FigureController::class, "destroy"]);
-
-
-
-
-
 
 /* Összefogva a fentieket egyben */
 Route::resource("/figurines", FigureController::class);

@@ -22,7 +22,7 @@ class StoreFigureRequest extends FormRequest
 
      /* Szabályok */
     public function rules(): array 
-    {
+    {   //Másik formátum 'name' => 'required|string|max:255 (altgr + w szimbóluma)'
         return [
             'name' => ['required', 'string', 'max:255'], // Required, must be a string, and max 255 characters.
             'price' => ['required', 'numeric', 'min:0'], // Required, numeric, and must be at least 0.

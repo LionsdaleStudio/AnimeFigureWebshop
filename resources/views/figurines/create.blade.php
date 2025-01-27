@@ -16,7 +16,7 @@
                 <form action="{{route("figurines.store")}}" method="POST">
                     @csrf
                     <input type="text" class="form-control mb-3" placeholder="Név" name="name" @error("name") style="border-color: red"; @enderror>
-                    @error("name") @enderror
+                    @error("name") {{$message}} @enderror
                     <input type="number" class="form-control mb-3" placeholder="Ár" name="price" step="0.01">
                     <input type="text" class="form-control mb-3" placeholder="Leírás" name="description">
                     <input type="text" class="form-control mb-3" placeholder="Származás" name="origin">

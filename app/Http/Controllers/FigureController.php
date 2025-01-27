@@ -13,7 +13,7 @@ class FigureController extends Controller
      */
     public function index()
     {
-        $figurines = Figure::all();
+        $figurines = Figure::all()->sortByDesc("id");
         return view("figurines.index", ["figurines" => $figurines]);
     }
 
@@ -32,9 +32,9 @@ class FigureController extends Controller
     {
         echo "This is the store page";
 
-        Figure::create($request->all());
+        $figurine = Figure::create($request->all());
 
-        return "mentettem";
+        return back()->with("message", "Feltöltés sikeres");
     }
 
     /**
