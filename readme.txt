@@ -52,3 +52,10 @@
         - @csrf minden POST metódusú formnál. (419 expired error ha nem van meg)
 
 Repeat 11-14 as many times as you need
+
+GIT LEKÉRÉSE
+git clone https://github.com/LionsdaleStudio/AnimeFigureWebshop.git
+utána composer.json -> install-ra kattints rá.
+utána npm install
+utánan .env fájl létrehozása, az example fájl átmásolása
+utána php artisan key:generate és írd át az adatbázis adatokat jóra (mysql és adatbázisnév)
