@@ -38,7 +38,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route("figurines.index")}}">List all figurines</a>
+                            <a class="nav-link" href="{{route("figures.index")}}">List all figurines</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"

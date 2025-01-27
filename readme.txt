@@ -59,3 +59,17 @@ utána composer.json -> install-ra kattints rá.
 utána npm install
 utánan .env fájl létrehozása, az example fájl átmásolása
 utána php artisan key:generate és írd át az adatbázis adatokat jóra (mysql és adatbázisnév)
+
+
+Hasznos parancsok:
+php artisan optimize
+php artisan route:list => útvonalak listázása
+dd($valami) -> ugyanaz mint a var_dump és a console.log stb...
+
+Tanácsok:
+
+Minden elnevezésre figyelj
+Modell neve: NAGY BETŰ egyesszám (pl.: Student)
+url Modellneve többesszámban ('/students')
+paraméterek neve és frontend átadások $student ha egy és $students ha több.
+Tábla neve students 

@@ -4,6 +4,16 @@
     <div class="row">
         <h1>Anime Figurine List</h1>
     </div>
+
+    @if (session('success'))
+        <div class="row">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">{{ session('success') }}</h4>
+                <hr />
+            </div>
+        </div>
+    @endif
+
     <div class="row">
         <div class="table-responsive">
             <table class="table table-secondary table-hover table-striped text-center">
@@ -17,15 +27,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($figurines as $item)
+                    @foreach ($figurines as $figure)
                         <tr class="">
-                            <td scope="row">{{$item->name}}</td>
-                            <td>{{$item->price}}</td>
-                            <td>{{$item->quantity}}</td>
-                            <td><input type="checkbox" disabled @if($item->limited == 1) checked @endif></td>
-                            <td><form action="" method="POST"><button class="btn btn-info">Show</button></form></td>
-                            <td><form action="" method="POST"><button class="btn btn-warning">Edit</button></form></td>
-                            <td><form action="" method="POST"><button class="btn btn-danger">Delete</button></form></td>
+                            <td scope="row">{{ $figure->name }}</td>
+                            <td>{{ $figure->price }}</td>
+                            <td>{{ $figure->quantity }}</td>
+                            <td><input type="checkbox" disabled @if ($figure->limited == 1) checked @endif></td>
+                            <td>
+                                <form action="{{ route('figures.show', $figure) }}" method="GET">
+                                    <button class="btn btn-info">Show</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="{{ route('figures.edit', $figure) }}" method="GET"><button
+                                        class="btn btn-warning">Edit</button></form>
+                            </td>
+                            <td>
+                                <form action="{{ route('figures.destroy', $figure) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
 

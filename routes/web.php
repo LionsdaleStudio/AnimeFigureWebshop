@@ -29,4 +29,4 @@ Route::get('/', function () {
 //Route::delete( "/figurines/{figure}", [FigureController::class, "destroy"]);
 
 /* Összefogva a fentieket egyben */
-Route::resource("/figurines", FigureController::class);
+//Route::resource("/figures", FigureController::class);
